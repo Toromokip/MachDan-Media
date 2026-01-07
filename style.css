@@ -417,7 +417,7 @@ section {
 }
 @media (max-width: 480px) {
     .navbar nav a {
-        font-size: 0.85rem;
+        font-size: 1.3rem;
     }
 
     footer {
