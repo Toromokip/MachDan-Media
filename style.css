@@ -287,6 +287,8 @@ h3 {
     padding: 15px;
     border-radius: 50%;
     text-decoration: none;
+    bottom: max(20px, env(safe-area-inset-bottom));
+    right: max(20px, env(safe-area-inset-right));
 }
 
 /* FOOTER */
@@ -371,11 +373,6 @@ h3 {
 }
 
 
-.whatsapp-float {
-    bottom: max(20px, env(safe-area-inset-bottom));
-    right: max(20px, env(safe-area-inset-right));
-}
-
 /* MOBILE NAV */
 @media screen and (max-width: 768px) {
     .services-tiles {
@@ -428,7 +425,6 @@ h3 {
 
     .btn-primary,
     .btn-outline {
-        width: 70%;
         text-align: center;
     }
 
