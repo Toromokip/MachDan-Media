@@ -208,7 +208,7 @@ nav a {
 
 /* SECTIONS */
 section {
-    padding: 80px 10%;
+    padding-top: 80px;
     min-height: 100dvh;
 }
 
