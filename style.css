@@ -41,10 +41,10 @@ header.navbar {
     height: 80px;
 }
 
-nav a {
+.navbar nav a {
     margin-left: 30px;
     position: relative;
-    font-size: 0.95rem;
+    
 }
 
 /* underline from center */
@@ -208,8 +208,7 @@ nav a {
 
 /* SECTIONS */
 section {
-    padding-top: 80px;
-    min-height: 100dvh;
+    padding: 80px 10%;
 }
 
 h3 {
@@ -294,9 +293,6 @@ footer {
     text-align: center;
     padding: 20px;
 }
-html {
-    font-size: clamp(14px, 1.2vw, 18px);
-}
 
 .hero h1 {
     font-size: clamp(2.2rem, 6vw, 4rem);
@@ -318,22 +314,28 @@ h3 {
     font-size: clamp(1.4rem, 4vw, 2rem);
 }
 section {
-    padding: clamp(50px, 8vw, 90px) clamp(20px, 8vw, 10%);
+    padding-top: 80px;
+    min-height: 100dvh;
 }
+
 /* MOBILE NAV */
-@media (max-width: 768px) {
-    header.navbar {
+@media screen and (max-width: 768px) {
+    .services-tiles {
+    display: block;
+}
+
+    .navbar {
         flex-direction: column;
-        padding: 15px 20px;
+        padding: 15px;
     }
 
-    .navbar nav {
+     nav {
         margin-top: 15px;
     }
 
-    header.navbar nav a {
+     nav a {
         margin: 0 12px;
-        font-size: 0.95rem;
+        font-size: 1.3rem;
     }
 
     .hero {
@@ -352,10 +354,13 @@ section {
         width: 100%;
         text-align: center;
     }
+
+    .pic2, .pic18, .pic11{
+    grid-column: unset;
 }
-.placeholder {
-    height: clamp(160px, 25vw, 220px);
+
 }
+
 
 /* CONTACT */
 .contacts {
@@ -414,13 +419,4 @@ section {
 .whatsapp-float {
     bottom: max(20px, env(safe-area-inset-bottom));
     right: max(20px, env(safe-area-inset-right));
-}
-@media (max-width: 480px) {
-    .navbar nav a {
-        font-size: 0.85rem;
-    }
-
-    footer {
-        font-size: 0.8rem;
-    }
 }
