@@ -321,16 +321,16 @@ section {
 }
 /* MOBILE NAV */
 @media (max-width: 768px) {
-    .navbar {
+    header.navbar {
         flex-direction: column;
-        padding: 15px;
+        padding: 15px 20px;
     }
 
     .navbar nav {
         margin-top: 15px;
     }
 
-    .navbar nav a {
+    header.navbar nav a {
         margin: 0 12px;
         font-size: 0.95rem;
     }
