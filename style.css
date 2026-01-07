@@ -316,69 +316,11 @@ h3 {
     font-size: clamp(1.4rem, 4vw, 2rem);
 }
 
-/* MOBILE NAV */
-@media screen and (max-width: 768px) {
-    .services-tiles {
-    transform: none;
-    overflow: hidden;
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 20px;
-    }
-.pic2, .pic11, .pic0 {
-    grid-column: 1 / 3;
-}
-.pic18, .pic12 {
-    max-width: 95%;
-}
-.grid {
-    display: grid;
-    grid-template-columns: 50% 50%;
-    gap: 10px;
-    align-items: center;
-    margin: auto;
-    max-width: 100vw;
-    }
-    
-
-    .navbar {
-        flex-direction: column;
-        padding: 15px;
-    }
-
-    .navbar nav {
-        margin-top: 15px;
-    }
-
-    .navbar nav a {
-        margin: 0 12px;
-        font-size: 0.95rem;
-    }
-
-    .hero {
-        height: auto;
-        padding: 120px 20px;
-    }
-
-    .hero-buttons {
-        display: flex;
-        flex-direction: column;
-        gap: 15px;
-    }
-
-    .btn-primary,
-    .btn-outline {
-        width: 100%;
-        text-align: center;
-    }
-
-}
-
-
 /* CONTACT */
 .contacts {
     font-family: 'Outfit';
     height: 100vh;
+    max-width: 90dvw;
     margin-top: 40px;
     display: flex;
     align-items: center;
@@ -432,4 +374,65 @@ h3 {
 .whatsapp-float {
     bottom: max(20px, env(safe-area-inset-bottom));
     right: max(20px, env(safe-area-inset-right));
+}
+
+/* MOBILE NAV */
+@media screen and (max-width: 768px) {
+    .services-tiles {
+    transform: none;
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    }
+.pic2, .pic11, .pic0 {
+    grid-column: 1 / 3;
+}
+.pic18, .pic12 {
+    max-width: 95%;
+}
+.grid {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    gap: 10px;
+    align-items: center;
+    margin: auto;
+    max-width: 100vw;
+    }
+    
+
+    .navbar {
+        flex-direction: column;
+        padding: 15px;
+    }
+
+    .navbar nav {
+        margin-top: 15px;
+    }
+
+    .navbar nav a {
+        margin: 0 12px;
+        font-size: 0.95rem;
+    }
+
+    .hero {
+        height: auto;
+        padding: 120px 20px;
+    }
+
+    .hero-buttons {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .btn-primary,
+    .btn-outline {
+        width: 70%;
+        text-align: center;
+    }
+
+    .contact-inputs{
+    width: 120%;
+}
 }
