@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Machdan Media</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init({
+        publicKey: "Kcaopcwt1xOAaY5RI",
+      });
+   })();
+</script>
+<script src="script.js"></script>
+</head>
+<body>
+
+<header class="navbar">
+    <img src="assets/images/logo.png" class="logo">
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="portfolio.html">Portfolio</a>
+        <a href="services.html">Services</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+</header>
+
+<div class="contacts">
+    <form class="contact-form">
+    <div class="contact-title">
+        <h2>Get in touch</h2>
+    <hr>
+    </div>
+        <input type="text" id="name" placeholder="Your Name" class="contact-inputs" required>
+        <input type="tel" id="number" placeholder="Phone Number" class="contact-inputs" required>
+        <input type="text" id="event" placeholder="Event Type" class="contact-inputs" required>
+        <textarea id="details" placeholder="Event Details" class="contact-inputs" required></textarea>
+        <button type="submit" class="btn-primary" onclick="sendMail()">Send Inquiry</button>
+    </form>
+</div>
+
+</body>
+</html>

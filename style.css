@@ -1,0 +1,426 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Poppins", Arial, sans-serif;
+    background: radial-gradient(circle at top left, #0a1f44, #000);
+    color: #fff;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+/* =========================
+   NAVBAR
+========================= */
+
+header.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 2px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(0,0,0,0.65);
+    backdrop-filter: blur(8px);
+    z-index: 1000;
+}
+
+.logo {
+    height: 80px;
+}
+
+nav a {
+    margin-left: 30px;
+    position: relative;
+    font-size: 0.95rem;
+}
+
+/* underline from center */
+.navbar nav a {
+  background: linear-gradient(currentColor, currentColor) bottom center / 0 2px no-repeat;
+  color: white; 
+  padding-bottom: 0.4em; 
+  text-decoration: none;
+  transition: background-size 0.5s ease;
+}
+
+/* Optional: subtle color change */
+.navbar nav a:hover {
+    color: #d4af37;
+    background-size: 110% 3px;
+}
+
+/* HERO */
+.hero {
+    height: 90vh;
+    background: radial-gradient(circle at top left, #0a1f44, #000);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 4rem;
+}
+
+.hero h2 {
+    color: #d4af37;
+}
+
+/* BUTTONS */
+.btn-primary {
+    background: #d4af37;
+    color: #000;
+    padding: 12px 25px;
+    text-decoration: none;
+}
+
+.btn-outline {
+    border: 1px solid #d4af37;
+    color: #d4af37;
+    padding: 12px 25px;
+    text-decoration: none;
+}
+
+/* =========================
+   SERVICES SECTION
+========================= */
+
+.services-tiles {
+    background: radial-gradient(circle at top left, #0a1f44, #000);
+    padding: 140px 60px 80px;
+}
+
+.services-tiles h3 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 60px;
+}
+
+/* GRID */
+.services-tiles {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+/* =========================
+   SERVICE TILE
+========================= */
+
+.service-tile {
+    position: relative;
+    height: 240px;
+    background-image: var(--bg);
+    background-size: cover;
+    background-position: center;
+    border-radius: 14px;
+    overflow: visible;
+    cursor: pointer;
+    transition: transform 0.6s ease, opacity 0.6s ease;
+}
+
+/* scale on hover */
+.service-tile:hover {
+    transform: scale(1.1);
+}
+
+/* dark overlay */
+.service-tile::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.55);
+    transition: opacity 0.6s ease;
+    z-index: 1;
+}
+
+/* title (centered by default) */
+.service-title {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    font-weight: 600;
+    z-index: 2;
+    transition: opacity 0.6s ease;
+}
+
+/* quote hidden, bottom aligned */
+.service-quote {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 5px;
+    padding: 0 20px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    line-height: 1.5;
+    text-align: center;
+    opacity: 0;
+    z-index: 2;
+    transition: opacity 0.4s ease;
+}
+
+/* =========================
+   HOVER BEHAVIOR
+========================= */
+
+/* reveal quote at bottom */
+.service-tile:hover .service-quote {
+    opacity: 1;
+}
+
+/* fade title */
+.service-tile:hover .service-title {
+    opacity: 0;
+}
+
+/* lighten overlay */
+.service-tile:hover::before {
+    opacity: 0.5;
+}
+
+/* FADE OTHER TILES */
+.services-tiles:hover .service-tile {
+    opacity: 1;
+}
+
+.services-tiles:hover .service-tile:hover {
+    opacity: 1;
+}
+
+/* SECTIONS */
+section {
+    padding: 80px 10%;
+}
+
+h3 {
+    color: #d4af37;
+    margin-bottom: 20px;
+}
+
+/* PORTFOLIO */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+    align-items: center;
+}
+
+.grid img {
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    border-radius: 14px;
+    justify-content: center;
+    align-items: center;
+}
+
+.pic2 {
+    grid-column: 1 / 5;
+}
+.pic18, .pic11 {
+    grid-column: 2 / 4;
+}
+
+.pic0 {
+    grid-column: 2 / 4;
+}
+
+/* ANIMATION */
+.fade-up {
+    animation: fadeUp 1s ease forwards;
+}
+
+@keyframes fadeUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* VIDEO*/
+.video-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    align-items: center;
+}
+.videogrid{
+    aspect-ratio: 16 / 9;
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+    
+}
+.videogrid video{
+    width: 100%;
+    height: 100%;
+    background: rgb(0, 0, 0);
+    border-radius: 10px;
+}
+
+/* WHATSAPP */
+.whatsapp-float {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    background: #25D366;
+    color: white;
+    padding: 15px;
+    border-radius: 50%;
+    text-decoration: none;
+}
+
+/* FOOTER */
+footer {
+    background: #000;
+    text-align: center;
+    padding: 20px;
+}
+html {
+    font-size: clamp(14px, 1.2vw, 18px);
+}
+
+.hero h1 {
+    font-size: clamp(2.2rem, 6vw, 4rem);
+}
+
+.hero h2 {
+    font-size: clamp(1.2rem, 3.5vw, 2rem);
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 25px;
+}
+
+h3 {
+    font-size: clamp(1.4rem, 4vw, 2rem);
+}
+section {
+    padding: clamp(50px, 8vw, 90px) clamp(20px, 8vw, 10%);
+}
+/* MOBILE NAV */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        padding: 15px;
+    }
+
+    .navbar nav {
+        margin-top: 15px;
+    }
+
+    .navbar nav a {
+        margin: 0 12px;
+        font-size: 0.95rem;
+    }
+}
+@media (max-width: 768px) {
+    .hero {
+        height: auto;
+        padding: 120px 20px;
+    }
+
+    .hero-buttons {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .btn-primary,
+    .btn-outline {
+        width: 100%;
+        text-align: center;
+    }
+}
+.placeholder {
+    height: clamp(160px, 25vw, 220px);
+}
+
+/* CONTACT */
+.contacts {
+    font-family: 'Outfit';
+    height: 100vh;
+    margin-top: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 20px;
+}
+
+.contact-title h2{
+    font-weight: 600;
+    color: #d4af37;
+    font-size: 40px;
+    margin-bottom: 5px;
+}
+.contact-title hr { 
+    border: none;
+    width: 120px;
+    height: 5px;
+    background-color: #d4af37;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+.contact-inputs{
+    width: 400px;
+    height: 50px;
+    border: none;
+    outline: none;
+    padding-left: 25px;
+    font-weight: 500;
+    color: #616161;
+    border-radius: 50px;
+}
+.contact-form textarea{
+    height: 100px;
+    padding-top: 15px;
+    border-radius: 20px;
+}
+.contact-inputs:focus{
+    border: 2px solid #d4af37;
+}
+.btn-primary{
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+
+.whatsapp-float {
+    bottom: max(20px, env(safe-area-inset-bottom));
+    right: max(20px, env(safe-area-inset-right));
+}
+@media (max-width: 480px) {
+    .navbar nav a {
+        font-size: 0.85rem;
+    }
+
+    footer {
+        font-size: 0.8rem;
+    }
+}
