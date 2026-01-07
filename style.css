@@ -332,7 +332,7 @@ section {
 
     .navbar nav a {
         margin: 0 12px;
-        font-size: 0.95rem;
+        font-size: 1.3rem;
     }
 }
 @media (max-width: 768px) {
