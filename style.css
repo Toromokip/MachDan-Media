@@ -370,6 +370,7 @@ footer {
     }
 
     .hero {
+        margin-top: 10px;
         height: auto;
         padding: 10px 20px;
     }
@@ -385,4 +386,5 @@ footer {
         width: 100%;
     }
 }
+
 
