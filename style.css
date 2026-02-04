@@ -15,7 +15,7 @@ a {
     color: inherit;
 }
 
-img {
+img{
     display: flex;
     max-width: 100%;
     height: auto;
@@ -66,31 +66,13 @@ h3 {
 /* ===== HERO SECTION ===== */
 
 .hero {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
     position: relative;
     min-height: 100vh;
     overflow: hidden;
-}
-
-.hero-video {
-    position: absolute;
-    inset: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    z-index: 0;
-}
-
-.hero::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: rgba(0,0,0,0.45);
-    z-index: 1;
-}
-
-.hero > *:not(.hero-video) {
-    position: relative;
-    z-index: 2;
 }
 
 .hero h1 {
@@ -233,11 +215,19 @@ h3 {
 .pic11, .pic19 {
     grid-column: 2 / 4;
 }
+.grid2 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 30px;
+}
+.grid2 img {
+    max-width: 100%;
+}
 
 .pic12, .pic13, .pic20, .pic23 {
     border-radius: 0;
     border: 3px solid #fff;
-    border-bottom: 8px solid #fff;
+    border-bottom: 30px solid #fff;
 }
 
 /* ===== VIDEO SECTION ===== */
@@ -364,7 +354,7 @@ footer {
         transform: none;
     }
 
-    .grid {
+    .grid, .grid2 {
         grid-template-columns: repeat(2, 1fr);
         gap: 10px;
     }
@@ -392,9 +382,6 @@ footer {
         margin-top: 10px;
         height: auto;
         padding: 10px 20px;
-    }
-    .hero-video {
-        display: none;
     }
     
     .hero-buttons {
